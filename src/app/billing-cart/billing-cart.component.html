@@ -1,0 +1,15 @@
+
+<div class="row">
+    <h4>Your Cart
+    <span style="font-size: 15px; width: 10px; float:initial;" class= "badge bg-danger">{{ totalCartItem}}</span></h4>
+  </div>
+  <div class="card" style="width: 18rem;">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let item of product">
+          {{item.name}} - {{item.price}}
+        </li>
+      </ul>
+      <div class="card-footer">
+       Total(INR): <strong>{{grandTotal}}</strong>
+      </div>
+    </div>

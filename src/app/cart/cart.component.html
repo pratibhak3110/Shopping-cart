@@ -1,0 +1,48 @@
+
+
+<div class="card text-center">
+    <div class="card-header">
+        <strong style="font-size: 20px;">Your Cart Items</strong> <br>
+        <button class="btn btn-danger" (click)="emptyCart()">Empty Cart</button> &nbsp;
+        <button class="btn btn-warning">Total items <span style="font-size: 10px;" class= "badge bg-danger">{{ totalCartItem}}</span></button>
+    </div>
+    <div class="card-body">
+        <ng-container *ngIf="product.length!= 0">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of product; index as i">
+                        <td>{{item.name}}</td>
+                        <td>{{item.price}}</td>
+                        <td>
+                            <button style="width:30px;" (click)="decrement(i)"><i class="fas fa-minus-circle"></i></button>&nbsp;
+                            <span>{{item.quantity}}</span> &nbsp;
+                            <button  style="width:30px;" (click)="increment(i)"><i class="fas fa-plus-circle"></i></button>
+                        </td>
+                        <td >
+                            <span>{{item.total}}</span>
+                                
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </ng-container>
+    
+        <ng-container *ngIf="product.length == 0">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8BuEm44LyVtvT35TqKQF3ANmRzACogr6WiQ&usqp=CAU" alt= "">
+            <h4>Your Cart is Empty</h4>
+        </ng-container>
+
+        <button class="btn btn-primary" (click)="redirectToBilling()">Checkout</button>
+    </div>
+    <div class="card-footer text-muted">
+        <b>Grand Total: Rs. {{grandTotal}}</b>
+    </div>
+  </div>

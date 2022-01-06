@@ -1,0 +1,70 @@
+<div class="container mt-3">
+    <div class="card backColor">
+        <div class="card-header">
+             Thank you so much asdf. Your order has been successfully placed and will be delivered in 3 days. &nbsp;
+             <button class= "btn btn-primary">Print Invoice</button> &nbsp;
+             <a href=""><button class="btn btn-primary"  (click)= "navigateToHome()">Place a new Order</button></a>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="card">
+        <div class="card-header ">
+            <p>
+                Invoice date: <strong>7-Dec-2021</strong>
+                <strong style= "float: right;">Status: Pending</strong>
+            </p>
+        </div>
+        <div class="card-body ">
+            <i style="font-size: 50px;" class="fas fa-shipping-fast"></i>&nbsp;
+            <a class="navbar-brand brand"><strong>Let's Shop</strong></a>
+            <strong class="inv8657"># INV- 8657</strong>
+
+            <br><br>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <p>From: </p>
+                    <strong>Let's Shop</strong>
+                    <p>No 12: OMR Road <br> Chennai, 60045 <br> Email: letsshop@gmail.com <br> Phone No: 123456789</p>
+                </div>
+            
+                <div class="col-md-4">
+                    <p>To: </p>
+                    <p *ngFor= "let item of billingInforArr">
+                        {{item.firstName}} {{item.lastName}} <br>
+                        {{item.mobile}} <br>
+                        {{item.address1}} {{item.address2}} <br>
+                        {{item.city}} {{item.state}} <br>
+                        {{item.zipCode}}
+                    </p>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div>
+                <table class="table table-striped">
+                    <thead>
+                        <th>Item</th>
+                        <th>Unit Cost</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </thead>
+                    <tbody>
+                        <tr  *ngFor="let item of product">
+                            <td>{{item.name}}</td>
+                            <td>{{item.price}}</td>
+                            <td>{{item.quantity}}</td>
+                            <td>{{item.total}}</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <b>SubTotal: Rs. {{grandTotal}}</b>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

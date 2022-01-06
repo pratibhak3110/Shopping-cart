@@ -1,0 +1,115 @@
+<div class="container mt-3">
+    <div class="row">
+    <div class="col-md-8">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="text"><strong>Billing Information</strong></h4>
+        </div>
+        <div class="card-body">
+            <form class="text" [formGroup]= "billingForm" (ngSubmit)= "saveInformation()">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>First Name</label>
+                        <input type= "text" class="form-control" formControlName= "firstName">
+                        <div class="lblError" *ngIf="this.billingForm.get('firstName')?.touched && this.billingForm.get('firstName')?.invalid">
+                            <div *ngIf="this.billingForm.get('firstName')?.errors?.['required']">First Name is required.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Last Name: </label>
+                        <input type= "text" class="form-control" formControlName= "lastName">
+                        <div class="lblError" *ngIf="this.billingForm.get('lastName')?.touched && this.billingForm.get('lastName')?.invalid">
+                            <div *ngIf="this.billingForm.get('lastName')?.errors?.['required']">Last Name is required.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Email: </label>
+                        <input type= "text" class="form-control" formControlName= "email">
+                        <div class="lblError" *ngIf="this.billingForm.get('email')?.touched && this.billingForm.get('email')?.invalid">
+                            <div *ngIf="this.billingForm.get('email')?.errors?.['required']">Email is required.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Mobile: </label>
+                        <input type= "text" class="form-control" formControlName= "mobile">
+                        <div class="lblError" *ngIf="this.billingForm.get('mobile')?.touched && this.billingForm.get('mobile')?.invalid">
+                            <div *ngIf="this.billingForm.get('mobile')?.errors?.['required']">Mobile is required.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Address 1: </label>
+                        <input type= "text" class="form-control" formControlName= "address1">
+                        <div class="lblError" *ngIf="this.billingForm.get('address1')?.touched && this.billingForm.get('address1')?.invalid">
+                            <div *ngIf="this.billingForm.get('address1')?.errors?.['required']">Address is required.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Address 2: </label>
+                        <input type= "text" class="form-control" formControlName= "address2">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>City: </label>
+                        <input type= "text" class="form-control" formControlName= "city">
+                        <div class="lblError" *ngIf="this.billingForm.get('city')?.touched && this.billingForm.get('city')?.invalid">
+                            <div *ngIf="this.billingForm.get('city')?.errors?.['required']">City is required.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label>State: </label>
+                        <div class="input-group">
+                            <select class="form-control form-select" formControlName="state">
+                                    <option value="Pune">Pune</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="Sangli">Sangli</option>
+                            </select>  
+                        </div>
+                        <div class="lblError" *ngIf="this.billingForm.get('state')?.touched && this.billingForm.get('state')?.invalid">
+                            <div *ngIf="this.billingForm.get('state')?.errors?.['required']">State is required.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Zip Code: </label>
+                        <input type= "text" class="form-control" formControlName= "zipCode">
+                        <div class="lblError" *ngIf="this.billingForm.get('zipCode')?.touched && this.billingForm.get('zipCode')?.invalid">
+                            <div *ngIf="this.billingForm.get('zipCode')?.errors?.['required']">Zipcode is required.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Payment Type: </label>
+                        <div class="input-group">
+                            <select class="form-control form-select" formControlName="payment">
+                                    <option value="Card">Card Payment</option>
+                                    <option value="COD">Cash On Delivery</option>
+                                    <option value="PhonePe">Phone Pe</option>
+                            </select>
+                        </div>
+                        <div class="lblError" *ngIf="this.billingForm.get('payment')?.touched && this.billingForm.get('payment')?.invalid">
+                            <div *ngIf="this.billingForm.get('payment')?.errors?.['required']">Payment method is required.</div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <button class="btn btn-primary" type="submit" [disabled]= "!billingForm.valid">Confirm and Place Order</button>
+                <button class="btn btn-primary" style="float: right;" (click)= "shopping()">Continue Shopping</button>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <div class= "col-md-4">
+       <app-billing-cart></app-billing-cart>
+    </div>
+    </div>
+</div>

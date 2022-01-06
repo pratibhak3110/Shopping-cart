@@ -1,0 +1,50 @@
+{
+  "laptops": [
+    {
+      "id": 1,
+      "img": "https://www.lenovo.com/medias/lenovo-laptop-think-thinkpad-t14s-gen-2-amd-hero.png?context=bWFzdGVyfHJvb3R8OTYyMzR8aW1hZ2UvcG5nfGg2Mi9oY2MvMTE1ODQ0NjM3NjU1MzQucG5nfDU0N2Q3MWY2MTUyNTdmZDI1MjRjNTM0MzZjN2Y5NjgwNmQ2OGYzZTVmNDg3ODk3YmYxYjdkZDA1YzdlZTQ1Yzc",
+      "name": "Lenovo",
+      "price": 50000
+    },
+    {
+      "id": 2,
+      "img": "https://www.lenovo.com/medias/lenovo-laptop-think-thinkpad-t14s-gen-2-amd-hero.png?context=bWFzdGVyfHJvb3R8OTYyMzR8aW1hZ2UvcG5nfGg2Mi9oY2MvMTE1ODQ0NjM3NjU1MzQucG5nfDU0N2Q3MWY2MTUyNTdmZDI1MjRjNTM0MzZjN2Y5NjgwNmQ2OGYzZTVmNDg3ODk3YmYxYjdkZDA1YzdlZTQ1Yzc",
+      "name": "Dell",
+      "price": 60000
+    },
+    {
+      "id": 3,
+      "img": "https://www.lenovo.com/medias/lenovo-laptop-think-thinkpad-t14s-gen-2-amd-hero.png?context=bWFzdGVyfHJvb3R8OTYyMzR8aW1hZ2UvcG5nfGg2Mi9oY2MvMTE1ODQ0NjM3NjU1MzQucG5nfDU0N2Q3MWY2MTUyNTdmZDI1MjRjNTM0MzZjN2Y5NjgwNmQ2OGYzZTVmNDg3ODk3YmYxYjdkZDA1YzdlZTQ1Yzc",
+      "name": "Hp",
+      "price": 20000
+    },
+    {
+      "id": 4,
+      "img": "https://www.lenovo.com/medias/lenovo-laptop-think-thinkpad-t14s-gen-2-amd-hero.png?context=bWFzdGVyfHJvb3R8OTYyMzR8aW1hZ2UvcG5nfGg2Mi9oY2MvMTE1ODQ0NjM3NjU1MzQucG5nfDU0N2Q3MWY2MTUyNTdmZDI1MjRjNTM0MzZjN2Y5NjgwNmQ2OGYzZTVmNDg3ODk3YmYxYjdkZDA1YzdlZTQ1Yzc",
+      "name": "MacBook",
+      "price": 80000
+    },
+    {
+      "id": 5,
+      "img": "https://www.lenovo.com/medias/lenovo-laptop-think-thinkpad-t14s-gen-2-amd-hero.png?context=bWFzdGVyfHJvb3R8OTYyMzR8aW1hZ2UvcG5nfGg2Mi9oY2MvMTE1ODQ0NjM3NjU1MzQucG5nfDU0N2Q3MWY2MTUyNTdmZDI1MjRjNTM0MzZjN2Y5NjgwNmQ2OGYzZTVmNDg3ODk3YmYxYjdkZDA1YzdlZTQ1Yzc",
+      "name": "Lenovo",
+      "price": 100000
+    },
+    {
+      "id": 6,
+      "img": "https://www.lenovo.com/medias/lenovo-laptop-think-thinkpad-t14s-gen-2-amd-hero.png?context=bWFzdGVyfHJvb3R8OTYyMzR8aW1hZ2UvcG5nfGg2Mi9oY2MvMTE1ODQ0NjM3NjU1MzQucG5nfDU0N2Q3MWY2MTUyNTdmZDI1MjRjNTM0MzZjN2Y5NjgwNmQ2OGYzZTVmNDg3ODk3YmYxYjdkZDA1YzdlZTQ1Yzc",
+      "name": "Lenovo",
+      "price": 30000
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
