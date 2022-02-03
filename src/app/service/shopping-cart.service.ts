@@ -20,6 +20,8 @@ export class ShoppingCartService {
   billingInfoArr: BillingInformation[]=[];
   updatedList: any;
   grandTotal!: number;
+
+  array!: any;
   
   constructor(
     private http: HttpClient
@@ -87,6 +89,8 @@ export class ShoppingCartService {
     let resultStr= '';
     let userLength= this.billingInfoArr.length;
     let newLength= this.billingInfoArr.push(info);
+    this.array= this.billingInfoArr.push(info);
+    console.log("array is " +this.array);
     if(newLength > userLength){
       resultStr= "Success";
     }
