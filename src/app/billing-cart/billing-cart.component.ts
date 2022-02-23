@@ -12,6 +12,7 @@ export class BillingCartComponent implements OnInit {
   product: any= [];
   totalCartItem: number= 0;
   grandTotal!: number;
+  grandTotal1!:number;
   
   constructor(
     private shopCartService: ShoppingCartService
